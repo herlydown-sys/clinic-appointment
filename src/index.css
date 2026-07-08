@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-[#F8FAFC] text-[#0F172A];
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    @apply tracking-tight font-bold;
+    color: #0B5F73 !important;
+  }
+
+  /* Global Icon Color Override */
+  svg, svg.lucide {
+    color: #0B5F73 !important;
+  }
+
+  /* Global Button Text Color Override */
+  button, 
+  a[class*="btn-"] {
+    color: #0F52BA !important;
+  }
+
+  /* Navigation Tabs Override */
+  header nav > a, header nav > div > button,
+  .mobile-menu a {
+    color: #12B5CB !important;
+  }
+
+  header .btn-gradient, header .btn-primary {
+    background: #0B5F73 !important;
+    color: #FFFFFF !important;
+  }
+
+  /* Global Muted Text Override */
+  .bullet-text {
+    color: #64748B !important;
+  }
+
+  .text-brand-gray, .text-brand-textMuted, .text-gray-500, .text-gray-400, .text-slate-500 {
+    color: #64748B !important;
+  }
+}
+
+@layer utilities {
+  /* Color Cycle Utilities */
+  .border-cycle:nth-child(5n+1) { border-color: #0B5F73 !important; }
+  .border-cycle:nth-child(5n+2) { border-color: #12B5CB !important; }
+  .border-cycle:nth-child(5n+3) { border-color: #0F52BA !important; }
+  .border-cycle:nth-child(5n+4) { border-color: #F2B544 !important; }
+  .border-cycle:nth-child(5n+5) { border-color: #E5E7EB !important; }
+
+  .bg-cycle:nth-child(5n+1) { background-color: #0B5F73 !important; color: white !important; }
+  .bg-cycle:nth-child(5n+2) { background-color: #12B5CB !important; color: white !important; }
+  .bg-cycle:nth-child(5n+3) { background-color: #0F52BA !important; color: white !important; }
+  .bg-cycle:nth-child(5n+4) { background-color: #F2B544 !important; color: #E5E7EB !important; }
+  .bg-cycle:nth-child(5n+5) { background-color: #E5E7EB !important; color: #E5E7EB !important; }
+
+  .btn-primary {
+    @apply bg-[#E5E7EB] text-[#0F52BA] font-bold px-8 py-3.5 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg inline-flex items-center justify-center gap-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-[#0F52BA] border-2 border-[#00A6B4] font-bold px-8 py-3.5 rounded-full transition-all duration-300 hover:-translate-y-1 hover:bg-[#00A6B4] hover:text-white inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-[#E5E7EB] to-[#00A6B4] text-[#0F52BA] font-bold px-8 py-3.5 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg inline-flex items-center justify-center gap-2 border-none;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-[#0F52BA] border border-[#00A6B4] font-bold px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#00A6B4] hover:text-[#0F52BA] inline-flex items-center justify-center gap-2;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-black mb-4;
+  }
+
+  .section-tag {
+    @apply inline-block text-[#E5E7EB] font-bold text-sm uppercase tracking-widest mb-3;
+  }
+  
+  .eduka-card {
+    @apply bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 border border-[#E2E8F0] overflow-hidden;
+  }
+}
