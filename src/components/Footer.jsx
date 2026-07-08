@@ -43,7 +43,7 @@ const Footer = () => {
               <img src={logo} alt="Xynab Solutions" className="h-12 object-contain" />
               <div className="flex flex-col pr-2">
                 <span className="font-black text-2xl tracking-tight leading-none drop-shadow-md">
-                  <span className="text-[#12B5CB]">Xynab</span> <span className="text-white">Solutions</span>
+                  <span className="text-[#0B5F73]">Xynab</span> <span className="text-[#12B5CB]">Solutions</span>
                 </span>
               </div>
             </Link>
